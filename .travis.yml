@@ -1,6 +1,6 @@
 language: ruby
 cache: bundler
-bundler_args: --without --without development
+bundler_args: --without development
 rvm:
   - 1.9.3
 script: bundle exec rake style
