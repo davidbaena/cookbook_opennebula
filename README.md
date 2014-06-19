@@ -1,3 +1,4 @@
+[![Build Status](https://secure.travis-ci.org/davidbaena/cookbook_opennebula.png)](http://travis-ci.org/davidbaena/cookbook_opennebula)
 opennebula Cookbook
 ===================
 TODO: Enter the cookbook description here.
