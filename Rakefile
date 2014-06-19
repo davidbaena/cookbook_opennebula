@@ -6,6 +6,7 @@ task :foodcritic do
     sandbox = File.join(File.dirname(__FILE__), %w{tmp foodcritic cookbook})
     prepare_foodcritic_sandbox(sandbox)
     puts "Hi\n\n"
+    sh "bundle install"
     sh "foodcritic --epic-fail any #{File.dirname(sandbox)}"
   else
     puts "WARN: foodcritic run is skipped as Ruby #{RUBY_VERSION} is < 1.9.2."
@@ -23,6 +24,6 @@ recipes resources templates}
   rm_rf sandbox
   mkdir_p sandbox
   cp_r Dir.glob("{#{files.join(',')}}"), sandbox
-  sh "bundle install"
-  puts "Ey\n\n"
+  
+  puts "Ey"
 end
