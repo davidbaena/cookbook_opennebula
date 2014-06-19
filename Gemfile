@@ -1,4 +1,12 @@
 source "https://rubygems.org"
 
-gem 'rake'
-gem 'foodcritic'
+
+group :lint do
+  gem 'foodcritic'
+  gem 'rake'
+end
+
+group :development do
+  gem 'guard'
+  gem 'guard-foodcritic'
+end
