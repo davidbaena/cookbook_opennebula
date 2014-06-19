@@ -28,8 +28,8 @@
 
 # Server Configuration
 #
-:host: 0.0.0.0
-:port: 8080
+:host: <%= node['one']['sunstone']['binder']%>
+:port: <%= node['one']['sunstone']['port']%>
 
 # Place where to store sessions, this value can be memory or memcache
 # Use memcache when starting multiple server processes, for example,
