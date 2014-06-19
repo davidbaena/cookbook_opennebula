@@ -17,7 +17,7 @@ log "Installing nfs-server..."
 package "nfs-kernel-server"
 
 log "Setting credentials"
-template "#{node[:one][:path]}/.one/one_auth" do
+template "#{node['one']['path']}/.one/one_auth" do
  source "one_auth.erb"
  owner "oneadmin"
  group "root"
