@@ -23,5 +23,6 @@ recipes resources templates}
   rm_rf sandbox
   mkdir_p sandbox
   cp_r Dir.glob("{#{files.join(',')}}"), sandbox
+  sh "bundle install"
   puts "\n\n"
 end
