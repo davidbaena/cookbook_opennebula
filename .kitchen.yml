@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+  driver_config:
+    require_chef_omnibus: true
+
+provisioner: 
+  name: chef_solo
+
+platforms:
+  - name: web
+    driver_config:
+      box: "fgrehm/precise64-lxc"
+      provider: lxc
+suites:
+  - name: default
+    run_list:
+      - recipe[minitest-handler]
+      - recipe[opennebula]
+      - recipe[opennebula::admin]
+      - recipe[opennebula::node]
